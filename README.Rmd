@@ -41,6 +41,8 @@ This is a basic example which shows you how to solve a common problem:
 ```{r example}
 library(testpackage)
 ## basic example code
+
+QR_save(system.file("extdata", "QR_Data.csv", package = "testpackage"))
 ```
 
 

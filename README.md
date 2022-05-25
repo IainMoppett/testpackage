@@ -32,6 +32,15 @@ This is a basic example which shows you how to solve a common problem:
 ``` r
 library(testpackage)
 ## basic example code
+
+QR_save(system.file("extdata", "QR_Data.csv", package = "testpackage"))
+#> Rows: 3 Columns: 2
+#> ── Column specification ────────────────────────────────────────────────────────
+#> Delimiter: ","
+#> chr (2): URL, Title
+#> 
+#> ℹ Use `spec()` to retrieve the full column specification for this data.
+#> ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 ```
 
 You’ll still need to render `README.Rmd` regularly, to keep `README.md`
