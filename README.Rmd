@@ -49,6 +49,10 @@ You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-da
 You can also embed plots, for example:
 
 ```{r pressure, echo = FALSE}
+library(testpackage)
+
+QR_save(system.file("extdata", "QR_Data.csv", package = "testpackage"))
+
 plot(pressure)
 ```
 

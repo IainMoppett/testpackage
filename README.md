@@ -42,6 +42,14 @@ example workflow can be found here:
 
 You can also embed plots, for example:
 
+    #> Rows: 3 Columns: 2
+    #> ── Column specification ────────────────────────────────────────────────────────
+    #> Delimiter: ","
+    #> chr (2): URL, Title
+    #> 
+    #> ℹ Use `spec()` to retrieve the full column specification for this data.
+    #> ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+
 <img src="man/figures/README-pressure-1.png" width="100%" />
 
 In that case, don’t forget to commit and push the resulting figure
