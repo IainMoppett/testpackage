@@ -15,9 +15,9 @@ QR_save <- function(data){
     qr_1 <- qrcode::qr_code(tbl_QR$URL[i])
     filename <- paste0("QR_", tbl_QR$Title[i], ".pdf")
     # Open a pdf file
-    pdf(filename)
+    grDevices::pdf(filename)
     # 2. Create a plot
     plot(qr_1)
     # Close the pdf file
-    dev.off() }
+    grDevices::dev.off() }
 }

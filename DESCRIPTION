@@ -11,6 +11,8 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.0
 Imports: 
     ggplot2,
+    grDevices,
+    grid,
     jpeg,
     png,
     qrcode,

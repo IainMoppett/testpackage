@@ -10,6 +10,8 @@
 #' @param width Size of the frame where text and logo are placed. Default is 4.
 #' @param text_size Font size for the text. Default is 16
 #' @return A plot with text (left) and logo (right)
+#'
+#'
 
 #' @export
 pretty_plot <- function(plot, source = "", logo_path, width = 4, text_size = 16) {
@@ -26,8 +28,8 @@ pretty_plot <- function(plot, source = "", logo_path, width = 4, text_size = 16)
                               gp = grid::gpar(fontsize=text_size))
 
   plot +
-    theme_light() +
-    theme(plot.margin = unit(c(1, 1, width, 1), "lines")) +
-    annotation_custom(logo) +
-    annotation_custom(texttoadd)
+    ggplot2::theme_light() +
+    ggplot2::theme(plot.margin = unit(c(1, 1, width, 1), "lines")) +
+    ggplot2::annotation_custom(logo) +
+    ggplot2::annotation_custom(texttoadd)
 }

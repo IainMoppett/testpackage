@@ -6,6 +6,8 @@
 #'
 #'
 #' @return A \code{GROB} that can be added to a ggplot.
+#'
+#' @importFrom grid unit
 
 get_img <- function(filename,
                     FUN = png::readPNG,
