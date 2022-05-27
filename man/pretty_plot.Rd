@@ -4,16 +4,14 @@
 \alias{pretty_plot}
 \title{Add a logo and text underneath a plot}
 \usage{
-pretty_plot(plot, source = "", logo_path, width = 4, text_size = 16)
+pretty_plot(plot, source_name = "", logo_path, text_size = 16)
 }
 \arguments{
 \item{plot}{A \code{ggplot} to be amended.}
 
-\item{source}{A character string of text to be added bottom left.}
+\item{source_name}{A character string of text to be added bottom left.}
 
 \item{logo_path}{Filepath to png or jpg file of logo to be added bottom right.}
-
-\item{width}{Size of the frame where text and logo are placed. Default is 4.}
 
 \item{text_size}{Font size for the text. Default is 16}
 }
@@ -24,4 +22,25 @@ A plot with text (left) and logo (right)
 \code{pretty_plot} is a wrapper to place a logo at the bottom right and an optional text at the bottom left.
 It is intended to give a consistent, 'corporate' feel to figures.
 It adds an extra margin to the plot at the bottom where the logos and text are placed.
+}
+\examples{
+library(ggplot2)
+pl_1 <- ggplot(mpg, aes(displ, hwy, colour = class)) + geom_point()
+pl_1_no_legend <- ggplot(mpg, aes(displ, hwy, colour = class)) +
+geom_point(show.legend = FALSE)
+
+pl_1
+pl_1_no_legend
+
+pp_pl_1 <- pretty_plot(pl_1, source = "Text 14 point",
+logo_path = system.file("extdata", "SNAP3_2019.jpg", package = "testpackage"),
+text_size = 14)
+
+pp_pl_1
+
+pp_pl_1_no_legend <- pretty_plot(pl_1, source = "Text 16 point",
+logo_path = system.file("extdata", "SNAP3_2019.jpg", package = "testpackage"),
+text_size = 16)
+
+pp_pl_1_no_legend
 }

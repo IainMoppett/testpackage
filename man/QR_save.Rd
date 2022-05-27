@@ -7,12 +7,16 @@
 QR_save(data)
 }
 \arguments{
-\item{data}{A csv filepath - formatted as URL and Title}
+\item{data}{Either: A a data.frame or a csv filepath - columns labelled as URL and Title}
 }
 \value{
 Pdf(s) of QR codes, saved to the current folder, named as "QR_Title.pdf"
 }
 \description{
-\code{QR_save} is a wrapper of \code{qrcode} that takes a formatted csv file of URLs
+\code{QR_save} is a wrapper of \code{qrcode} that takes either a dataframe or formatted csv file of URLs
 and titles and then saves the QR codes with appropriate titles. Useful for supporting presentations.
+}
+\examples{
+df <- data.frame(URL = c("https://www.rstudio.com", "https://hip-fracture-app.web.app"), Title = c("RStudio", "HipFractureApp"))
+QR_save(df)
 }
