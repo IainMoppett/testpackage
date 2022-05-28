@@ -9,11 +9,12 @@
 The goal of testpackage is to provide some helper functions for people
 working with HSRC or other projects.
 
-There are currently two independent tools.
+There are currently three independent tools.
 
 `pretty_plot` adds a logo and some text (e.g. source, date etc) to a
-plot. `QR_save` generates a series of QR codes from a csv file of URLs
-and titles. Useful for presentations.
+plot. `theme_HSRC` creates a ggplot theme `QR_save` generates a series
+of QR codes from a csv file of URLs and titles. Useful for
+presentations.
 
 ## Installation
 
@@ -27,7 +28,11 @@ devtools::install_github("IainMoppett/testpackage")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+### QR_save
+
+Use the `QR_save` function to save a series of pdfs of QR codes with a
+helpful title. Online tools tend to give a rather unhelpful ‘file.png’
+as the output.
 
 ``` r
 library(testpackage)
@@ -49,17 +54,9 @@ use GitHub Actions to re-render `README.Rmd` every time you push. An
 example workflow can be found here:
 <https://github.com/r-lib/actions/tree/v1/examples>.
 
-You can also embed plots, for example:
+### Pretty_plot
 
-    #> Rows: 3 Columns: 2
-    #> ── Column specification ────────────────────────────────────────────────────────
-    #> Delimiter: ","
-    #> chr (2): URL, Title
-    #> 
-    #> ℹ Use `spec()` to retrieve the full column specification for this data.
-    #> ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Adds a logo at the bottom right and some text (e.g. data source) at the
+bottom left.
 
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+<img src="man/figures/README-pretty_plot-1.png" width="100%" /><img src="man/figures/README-pretty_plot-2.png" width="100%" /><img src="man/figures/README-pretty_plot-3.png" width="100%" /><img src="man/figures/README-pretty_plot-4.png" width="100%" />
