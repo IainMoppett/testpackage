@@ -3,7 +3,7 @@
 #' \code{theme_HSRC} is a theme based on theme_minimal. No grid lines, only x and y axis.
 #' Horizontal y-axis label
 #' Dark grey rather than black for text elements
-#' @inheritParams ggplot2::theme
+#' @inheritParams ggplot2::theme_minimal
 #'
 #' @return A plot with text (left) and logo (right)
 #'

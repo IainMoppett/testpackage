@@ -12,13 +12,13 @@ theme_HSRC(
 )
 }
 \arguments{
-\item{base_size}{Base size for text elements. Default is 18}
+\item{base_size}{base font size, given in pts.}
 
-\item{base_family}{Base font family}
+\item{base_family}{base font family}
 
-\item{base_line_size}{Base line size for line elements. Default is base_size / 170}
+\item{base_line_size}{base size for line elements}
 
-\item{base_rect_size}{Base size for rect elements. Default is base_size / 170}
+\item{base_rect_size}{base size for rect elements}
 }
 \value{
 A plot with text (left) and logo (right)
