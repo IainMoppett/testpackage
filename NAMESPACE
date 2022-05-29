@@ -2,7 +2,6 @@
 
 export(QR_save)
 export(pretty_plot)
-export(str_split_one)
 export(theme_HSRC)
 importFrom(ggplot2,"%+replace%")
 importFrom(grid,unit)
