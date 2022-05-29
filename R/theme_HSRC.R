@@ -3,11 +3,7 @@
 #' \code{theme_HSRC} is a theme based on theme_minimal. No grid lines, only x and y axis.
 #' Horizontal y-axis label
 #' Dark grey rather than black for text elements
-#'
-#' @param base_size Base size for text elements. Default is 18
-#' @param base_family Base font family
-#' @param base_line_size Base line size for line elements. Default is base_size / 170
-#' @param base_rect_size Base size for rect elements. Default is base_size / 170
+#' @inheritParams ggplot2::theme
 #'
 #' @return A plot with text (left) and logo (right)
 #'
