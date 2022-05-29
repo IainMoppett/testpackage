@@ -48,12 +48,6 @@ QR_save(system.file("extdata", "QR_Data.csv", package = "testpackage"))
 #> ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 ```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/v1/examples>.
-
 ### Pretty_plot
 
 Adds a logo at the bottom right and some text (e.g. data source) at the
