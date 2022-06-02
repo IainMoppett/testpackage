@@ -50,9 +50,12 @@ QR_save(system.file("extdata", "QR_Data.csv", package = "testpackage"))
 
 ### Pretty_plot
 
-Adds a logo at the bottom right and some text (e.g. data source) at the bottom left.
+Adds a logo at the bottom right and some text (e.g. data source) at the bottom left. Plots can be set-up using
+whatever themes you choose. Or you can override the theme with `theme_HSRC` by setting `theme_apply` to `TRUE.`  
 
-```{r pretty_plot, echo = FALSE}
+Two native test plots
+
+```{r test_plots, echo = FALSE}
 library(testpackage)
 library(ggplot2)
 
@@ -64,11 +67,30 @@ pl_1
 pl_1_no_legend
 pp_pl_1 <- pretty_plot(pl_1, source = "Text 14 point",
 logo_path = system.file("extdata", "SNAP3_2019.jpg", package = "testpackage"),
-text_size = 14)
+text_size = 14,
+theme_apply = FALSE)
 
 pp_pl_1
-pp_pl_1_no_legend <- pretty_plot(pl_1, source = "Text 16 point",
+pp_pl_1_no_legend <- pretty_plot(pl_1, source = "Text 16 point, HSRC theme",
 logo_path = system.file("extdata", "SNAP3_2019.jpg", package = "testpackage"),
-text_size = 16)
+text_size = 16,
+theme_apply = TRUE)
 pp_pl_1_no_legend
 ```
+
+Pretty_plot function applied to the test plots
+```{r pretty_plots, echo = FALSE}
+pp_pl_1 <- pretty_plot(pl_1, source = "Text 14 point, native theme",
+logo_path = system.file("extdata", "SNAP3_2019.jpg", package = "testpackage"),
+text_size = 14,
+theme_apply = FALSE)
+
+pp_pl_1
+
+pp_pl_1_no_legend <- pretty_plot(pl_1, source = "Text 16 point, HSRC theme",
+logo_path = system.file("extdata", "SNAP3_2019.jpg", package = "testpackage"),
+text_size = 16,
+theme_apply = TRUE)
+pp_pl_1_no_legend
+```
+

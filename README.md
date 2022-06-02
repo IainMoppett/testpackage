@@ -51,6 +51,13 @@ QR_save(system.file("extdata", "QR_Data.csv", package = "testpackage"))
 ### Pretty_plot
 
 Adds a logo at the bottom right and some text (e.g. data source) at the
-bottom left.
+bottom left. Plots can be set-up using whatever themes you choose. Or
+you can override the theme with `theme_HSRC` by setting `theme_apply` to
+`TRUE.`
 
-<img src="man/figures/README-pretty_plot-1.png" width="100%" /><img src="man/figures/README-pretty_plot-2.png" width="100%" /><img src="man/figures/README-pretty_plot-3.png" width="100%" /><img src="man/figures/README-pretty_plot-4.png" width="100%" />
+Two native test plots
+
+<img src="man/figures/README-test_plots-1.png" width="100%" /><img src="man/figures/README-test_plots-2.png" width="100%" /><img src="man/figures/README-test_plots-3.png" width="100%" /><img src="man/figures/README-test_plots-4.png" width="100%" />
+
+Pretty_plot function applied to the test plots
+<img src="man/figures/README-pretty_plots-1.png" width="100%" /><img src="man/figures/README-pretty_plots-2.png" width="100%" />
