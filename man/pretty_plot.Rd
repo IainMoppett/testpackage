@@ -4,7 +4,13 @@
 \alias{pretty_plot}
 \title{Add a logo and text underneath a plot}
 \usage{
-pretty_plot(plot, source_name = "", logo_path, text_size = 16)
+pretty_plot(
+  plot,
+  source_name = "",
+  logo_path,
+  text_size = 16,
+  theme_apply = TRUE
+)
 }
 \arguments{
 \item{plot}{A \code{ggplot} to be amended.}
@@ -14,6 +20,8 @@ pretty_plot(plot, source_name = "", logo_path, text_size = 16)
 \item{logo_path}{Filepath to png or jpg file of logo to be added bottom right.}
 
 \item{text_size}{Font size for the text. Default is 16}
+
+\item{theme_apply}{Logical. If \code{TRUE} applies the HSRC theme to the plot.}
 }
 \value{
 A plot with text (left) and logo (right)
@@ -34,13 +42,13 @@ pl_1_no_legend
 
 pp_pl_1 <- pretty_plot(pl_1, source = "Text 14 point",
 logo_path = system.file("extdata", "SNAP3_2019.jpg", package = "testpackage"),
-text_size = 14)
+text_size = 14, theme_apply = FALSE)
 
 pp_pl_1
 
-pp_pl_1_no_legend <- pretty_plot(pl_1, source = "Text 16 point",
+pp_pl_1_no_legend <- pretty_plot(pl_1, source = "Text 16 point, HSRC theme",
 logo_path = system.file("extdata", "SNAP3_2019.jpg", package = "testpackage"),
-text_size = 16)
+text_size = 16, theme_apply = TRUE)
 
 pp_pl_1_no_legend
 }
