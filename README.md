@@ -57,7 +57,7 @@ you can override the theme with `theme_HSRC` by setting `theme_apply` to
 
 Two native test plots
 
-<img src="man/figures/README-test_plots-1.png" width="100%" /><img src="man/figures/README-test_plots-2.png" width="100%" /><img src="man/figures/README-test_plots-3.png" width="100%" /><img src="man/figures/README-test_plots-4.png" width="100%" />
+<img src="man/figures/README-test_plots-1.png" width="100%" /><img src="man/figures/README-test_plots-2.png" width="100%" />
 
 Pretty_plot function applied to the test plots
 <img src="man/figures/README-pretty_plots-1.png" width="100%" /><img src="man/figures/README-pretty_plots-2.png" width="100%" />

@@ -65,17 +65,7 @@ geom_point(show.legend = FALSE)
 
 pl_1
 pl_1_no_legend
-pp_pl_1 <- pretty_plot(pl_1, source = "Text 14 point",
-logo_path = system.file("extdata", "SNAP3_2019.jpg", package = "testpackage"),
-text_size = 14,
-theme_apply = FALSE)
 
-pp_pl_1
-pp_pl_1_no_legend <- pretty_plot(pl_1, source = "Text 16 point, HSRC theme",
-logo_path = system.file("extdata", "SNAP3_2019.jpg", package = "testpackage"),
-text_size = 16,
-theme_apply = TRUE)
-pp_pl_1_no_legend
 ```
 
 Pretty_plot function applied to the test plots
