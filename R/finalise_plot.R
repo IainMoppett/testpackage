@@ -18,6 +18,7 @@ create_footer <- function (source_name, logo_path, fontsize = 16) {
 #' @param logo_path Filepath to png or jpg file of logo to be added bottom right.
 #' @param text_size Font size for the text. Default is 16
 #' @param theme_apply Logical. If \code{TRUE} applies the HSRC theme to the plot.
+#' @param facet_apply Logical. If \code{TRUE} applies colour and text size to a facet plot.
 #' @return A plot with text (left) and logo (right)
 #'
 #' @examples
@@ -40,17 +41,32 @@ create_footer <- function (source_name, logo_path, fontsize = 16) {
 #' text_size = 16, theme_apply = TRUE)
 #'
 #' pp_pl_1_no_legend
+#'
+#' pl_2 <- ggplot(mpg, aes(displ, hwy)) + geom_point() + facet_wrap(~class, ncol = 3)
+#'
+#' pp_pl_2 <- pretty_plot_2(pl_2, source_name = "Facet wrap",logo_path = system.file("extdata", "SNAP3_2019.jpg", package = "testpackage"),
+#' text_size = 16, theme_apply = TRUE,
+#' facet_apply = TRUE)
+#'
+#' pp_pl_2
 
 #' @export
-pretty_plot <- function(plot, source_name = "", logo_path, text_size = 16, theme_apply = TRUE) {
+pretty_plot <- function(plot, source_name = "", logo_path,
+                        text_size = 16,
+                        theme_apply = TRUE,
+                        facet_apply = FALSE) {
   new_footer <- create_footer(source_name, logo_path = logo_path, fontsize = text_size)
   if (theme_apply) {plot <- plot +
-    theme_HSRC()
+    theme_HSRC()} else
+    {plot <- plot}
+  if (facet_apply) {
+    plot <- plot +
+      theme(strip.text = element_text(
+        size = text_size*0.75, color = grDevices::rgb(105, 105, 105, maxColorValue = 255)))
+  } else
+  {plot <- plot}
   plot_grid <- ggpubr::ggarrange(plot, new_footer,
                                  ncol = 1, nrow = 2,
-                                 heights = c(1, 0.07))} else {
-  plot_grid <- ggpubr::ggarrange(plot, new_footer,
-                                 ncol = 1, nrow = 2,
-                                 heights = c(1, 0.07))}
+                                 heights = c(1, 0.07))
 
 }
