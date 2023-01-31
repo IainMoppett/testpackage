@@ -55,6 +55,9 @@ bottom left. Plots can be set-up using whatever themes you choose. Or
 you can override the theme with `theme_HSRC` by setting `theme_apply` to
 `TRUE.`
 
+You can also add facet plot formatting in the same style with
+`facet_apply` as `TRUE`.
+
 Two native test plots
 
 <img src="man/figures/README-test_plots-1.png" width="100%" /><img src="man/figures/README-test_plots-2.png" width="100%" />

@@ -44,7 +44,7 @@ create_footer <- function (source_name, logo_path, fontsize = 16) {
 #'
 #' pl_2 <- ggplot(mpg, aes(displ, hwy)) + geom_point() + facet_wrap(~class, ncol = 3)
 #'
-#' pp_pl_2 <- pretty_plot_2(pl_2, source_name = "Facet wrap",logo_path = system.file("extdata", "SNAP3_2019.jpg", package = "testpackage"),
+#' pp_pl_2 <- pretty_plot(pl_2, source_name = "Facet wrap",logo_path = system.file("extdata", "SNAP3_2019.jpg", package = "testpackage"),
 #' text_size = 16, theme_apply = TRUE,
 #' facet_apply = TRUE)
 #'

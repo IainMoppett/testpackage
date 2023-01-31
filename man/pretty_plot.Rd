@@ -9,7 +9,8 @@ pretty_plot(
   source_name = "",
   logo_path,
   text_size = 16,
-  theme_apply = TRUE
+  theme_apply = TRUE,
+  facet_apply = FALSE
 )
 }
 \arguments{
@@ -22,6 +23,8 @@ pretty_plot(
 \item{text_size}{Font size for the text. Default is 16}
 
 \item{theme_apply}{Logical. If \code{TRUE} applies the HSRC theme to the plot.}
+
+\item{facet_apply}{Logical. If \code{TRUE} applies colour and text size to a facet plot.}
 }
 \value{
 A plot with text (left) and logo (right)
@@ -51,4 +54,12 @@ logo_path = system.file("extdata", "SNAP3_2019.jpg", package = "testpackage"),
 text_size = 16, theme_apply = TRUE)
 
 pp_pl_1_no_legend
+
+pl_2 <- ggplot(mpg, aes(displ, hwy)) + geom_point() + facet_wrap(~class, ncol = 3)
+
+pp_pl_2 <- pretty_plot(pl_2, source_name = "Facet wrap",logo_path = system.file("extdata", "SNAP3_2019.jpg", package = "testpackage"),
+text_size = 16, theme_apply = TRUE,
+facet_apply = TRUE)
+
+pp_pl_2
 }

@@ -53,6 +53,8 @@ QR_save(system.file("extdata", "QR_Data.csv", package = "testpackage"))
 Adds a logo at the bottom right and some text (e.g. data source) at the bottom left. Plots can be set-up using
 whatever themes you choose. Or you can override the theme with `theme_HSRC` by setting `theme_apply` to `TRUE.`  
 
+You can also add facet plot formatting in the same style with `facet_apply` as `TRUE`.
+
 Two native test plots
 
 ```{r test_plots, echo = FALSE}
